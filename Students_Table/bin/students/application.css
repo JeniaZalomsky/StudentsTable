@@ -1,0 +1,4 @@
+.errorLabel {
+	-fx-font-weight: bold ;
+	-fx-text-fill: red ;
+}

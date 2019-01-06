@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.161" fx:controller="students.StudentsController">
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <Label text="Students App" BorderPane.alignment="CENTER" />
+         </top>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <FlowPane hgap="3.0" vgap="3.0">
+                     <children>
+                        <Label text="ID" />
+                        <TextField fx:id="idInput" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                  </FlowPane>
+                  <FlowPane hgap="3.0" vgap="3.0">
+                     <children>
+                        <Label text="First Name" />
+                        <TextField fx:id="firstNameInput" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                  </FlowPane>
+                  <FlowPane hgap="3.0" vgap="3.0">
+                     <children>
+                        <Label text="Last Name">
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </Label>
+                        <TextField fx:id="lastNameInput" />
+                        <Button fx:id="searchByLastName" text="Search _By Last Name" />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                  </FlowPane>
+                  <FlowPane hgap="3.0" vgap="3.0">
+                     <VBox.margin>
+                        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button fx:id="addButton" defaultButton="true" text="_Add" />
+                        <Button fx:id="searchButton" text="_Search by ID" />
+                        <Button fx:id="deleteByIdButton" text="Delete by _Id" />
+                        <Button fx:id="deleteSelectedButton" text="Delete Se_lected" />
+                        <Button fx:id="clearButton" text="_Clear" />
+                        <Button fx:id="deleteAllButton" text="_Delete All" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </top>
+   <bottom>
+      <Label fx:id="errorOuput" styleClass="errorLabel" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <TableView fx:id="studentsTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="firstNameCol" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="lastNameCol" prefWidth="75.0" text="Last Name" />
+        </columns>
+      </TableView>
+   </center>
+</BorderPane>
