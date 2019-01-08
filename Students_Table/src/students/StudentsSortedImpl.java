@@ -1,5 +1,4 @@
 package students;
-
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Map;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 public class StudentsSortedImpl implements ElementCollection<Student, String> {
 
 	private Map<String, Student> map;
-
+	
 	public StudentsSortedImpl() {
 		this.map=new TreeMap<String,Student>(new Comparator<String>() {
 			@Override
@@ -21,6 +20,12 @@ public class StudentsSortedImpl implements ElementCollection<Student, String> {
 			}
 		});
 	}
+	
+	/*
+	public StudentsSortedImpl() {
+		this.map = new HashMap<>();
+	}
+	*/
 
 	@Override
 	public void add(Student s) {
